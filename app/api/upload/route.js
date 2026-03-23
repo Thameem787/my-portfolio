@@ -1,5 +1,4 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+import { put } from '@vercel/blob';
 
 export async function POST(request) {
   try {
@@ -10,27 +9,18 @@ export async function POST(request) {
       return new Response(JSON.stringify({ error: 'No file uploaded' }), { status: 400 });
     }
 
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+    // Upload directly to Vercel Blob
+    const blob = await put(file.name, file, {
+      access: 'public',
+    });
 
-    // Create a unique filename
-    const filename = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-    const filePath = path.join(uploadDir, filename);
-
-    // Ensure directory exists
-    await fs.mkdir(uploadDir, { recursive: true });
-
-    // Write file
-    await fs.writeFile(filePath, buffer);
-
-    // Return the relative URL
-    return new Response(JSON.stringify({ url: `/uploads/${filename}` }), {
+    // Return the blob URL (this is a permanent public URL)
+    return new Response(JSON.stringify({ url: blob.url }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error("Upload error:", error);
-    return new Response(JSON.stringify({ error: 'Failed to upload image' }), { status: 500 });
+    console.error("Blob Upload Error:", error);
+    return new Response(JSON.stringify({ error: 'Failed to upload image to cloud' }), { status: 500 });
   }
 }
