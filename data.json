@@ -1,0 +1,86 @@
+{
+  "name": "F. Thameem Ansari",
+  "role": "Aspiring Software Developer & AI-Assisted Builder",
+  "heroTitle": "Welcome to my portfolio ",
+  "heroSub": "A Computer Science student at B.S. Abdur Rahman Crescent Institute crafting real-world applications using modern tools and AI.",
+  "aboutTitle": "I'm Thameem, a developer focused on creating meaningful digital solutions.",
+  "aboutP1": "I am a second-year Computer Science student at B.S. Abdur Rahman Crescent Institute of Science and Technology. I enjoy building practical applications and learning modern development tools.",
+  "aboutP2": "I use AI-assisted workflows to enhance productivity while focusing on understanding core concepts and improving my problem-solving skills. My goal is to grow into a skilled software developer by building meaningful projects.",
+  "aboutImgUrl": "/uploads/1774248874404-hero-image-2.jpeg",
+  "stat1": {
+    "val": "3+",
+    "label": "Projects Built"
+  },
+  "stat2": {
+    "val": "2nd",
+    "label": "Year B.Sc CS"
+  },
+  "skills": [
+    {
+      "icon": "keyboard",
+      "title": "Programming",
+      "desc": "Python, Java, C++, and JavaScript for building scalable backend logic and cross-platform applications.",
+      "color": "primary"
+    },
+    {
+      "icon": "code_blocks",
+      "title": "Web Development",
+      "desc": "HTML & CSS for crafting responsive, pixel-perfect, and accessible web interfaces.",
+      "color": "secondary"
+    },
+    {
+      "icon": "build",
+      "title": "Tools & Workflow",
+      "desc": "Git, GitHub, VS Code, and AI-assisted tools to streamline development and collaboration.",
+      "color": "tertiary"
+    },
+    {
+      "icon": "schema",
+      "title": "Core Concepts",
+      "desc": "Data Structures, OOP, DBMS, and OS — the bedrock of solid software engineering.",
+      "color": "primary"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Enhanced Study Planner",
+      "desc": "A clean productivity tool to manage study schedules efficiently. Built to reduce cognitive load and improve focus for students.",
+      "tags": [
+        "Python",
+        "React",
+        "CSS"
+      ],
+      "imgUrl": "/uploads/1774247557403-ai-screenshot.png",
+      "github": "https://github.com/Thameem787/study-planner",
+      "live": "https://study-planner-cyan.vercel.app/"
+    },
+    {
+      "title": "AI Resume Builder",
+      "desc": "A smart resume generator using AI to create professional, tailored resumes that stand out in competitive markets.",
+      "tags": [
+        "Python",
+        "OpenAI API",
+        "JavaScript"
+      ],
+      "imgUrl": "/uploads/1774248155679-resume-app-image.png",
+      "github": "https://github.com/Thameem787/resume-builder",
+      "live": "https://resume-builder-frontend-mauve.vercel.app/"
+    },
+    {
+      "title": "SimSketchers Website",
+      "desc": "A modern website built to showcase services and digital presence with clean layout and smooth user experience.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "imgUrl": "/uploads/1774248327786-art-web-image.png",
+      "github": "https://github.com/Thameem787/sim-sketchers",
+      "live": "https://sim-sketchers-website.vercel.app/"
+    }
+  ],
+  "email": "thameemthameem777888@gmail.com",
+  "github": "https://github.com/Thameem787",
+  "linkedin": "linkedin.com/in/thameem",
+  "resumeUrl": "#"
+}
