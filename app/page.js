@@ -54,12 +54,16 @@ export default function Portfolio() {
   const fetchData = async () => {
     try {
       const res = await fetch('/api/portfolio');
+      if (!res.ok) throw new Error("Failed to load data");
       const json = await res.json();
+      if (json.error) throw new Error(json.error);
       setData(json);
       setDraft(json);
       setLoading(false);
     } catch (error) {
       console.error("Failed to fetch data:", error);
+      // Fallback or error state
+      setLoading(false);
     }
   };
 
